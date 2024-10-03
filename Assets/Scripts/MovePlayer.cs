@@ -1,23 +1,24 @@
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class MovePlayer : MonoBehaviour
 {
+    //Campos serializados para la comunicación que permiten al diseñador de juego cambiar las variables
     [SerializeField]
-    private float speed;
-    public float rotationspeed;
-    private Rigidbody rb;
+    private float speed; // Variable de velocidad de movimiento
+    public float rotationspeed; // Variable de velocidad de rotación
+    private Rigidbody rb; // Instanciar un cuerpo rigido
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Cursor.visible= false;
-        Cursor.lockState = CursorLockMode.Locked;
-        rb = GetComponent<Rigidbody>();
+        Cursor.visible= false; // Ocultar el mouse al darle iniciar el juego
+        Cursor.lockState = CursorLockMode.Locked; // Limitar el movimiento del cursor solo a solo dentro de la pantalla de juego
+        rb = GetComponent<Rigidbody>(); // Obtiene el componente al que esta asociado el cuerpo rígido
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.UpArrow)) // Detectar si la tecla W o la 
         {
             rb.AddRelativeForce(0, 0, speed*Time.deltaTime);
         }

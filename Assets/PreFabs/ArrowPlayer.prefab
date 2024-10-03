@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 5687777062641685710}
   - component: {fileID: 6872252359061281589}
   - component: {fileID: 3897137658888403925}
-  m_Layer: 0
+  - component: {fileID: -9146797038216964404}
+  m_Layer: 8
   m_Name: ArrowPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +105,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -150,3 +151,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1300
+--- !u!114 &-9146797038216964404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5418227490552149209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d872ede6bf0944e8d6c3984ed5abb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5

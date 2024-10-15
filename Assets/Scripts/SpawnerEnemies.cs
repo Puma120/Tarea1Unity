@@ -9,17 +9,18 @@ public class SpawnerEnemies : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        WavesManager.instance.waves.Add(this);
         InvokeRepeating("Spawn", starttime, spawnrate);
+        Invoke("EndSpawner", endtime);
     }
     private void Spawn()
     {
-        Instantiate(prefab,transform.position,transform.rotation);
-        Invoke("CancelInvoke", endtime);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        Instantiate(prefab,transform.position + new Vector3(-2,0,6),transform.rotation);
         
+    }
+    private void EndSpawner()
+    {
+        WavesManager.instance.waves.Remove(this);
+        CancelInvoke();
     }
 }

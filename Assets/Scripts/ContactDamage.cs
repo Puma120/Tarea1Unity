@@ -6,12 +6,9 @@ public class ContactDamage : MonoBehaviour
     {
         Destroy(gameObject);
         Life life = other.GetComponent<Life>();
-        if (life != null){
-            life.amount -= damage;
-        }
-        if (life.amount <=0)
+        if (life != null)
         {
-            Destroy(other.gameObject);
+            life.amount -= damage;
         }
     }
 }

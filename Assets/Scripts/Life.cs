@@ -3,7 +3,7 @@ using UnityEngine;
 public class Life : MonoBehaviour
 {
     public float amount;
-    private void Start()
+    private void Update()
     {
         if (amount <= 0)
         {

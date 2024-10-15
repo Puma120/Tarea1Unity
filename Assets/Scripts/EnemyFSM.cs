@@ -21,11 +21,14 @@ public class EnemyFSM : MonoBehaviour
     public GameObject shootPoint;
     public float fireRate;
     float lastShootTime = 0;
+    Animator animator;
+
 
     private void Awake()
     {
         baseTransform = GameObject.Find("Base").transform;
         agent= GetComponentInParent<NavMeshAgent>();
+        animator = GetComponentInParent<Animator>();
     }
     void Update()
     {
@@ -51,6 +54,7 @@ public class EnemyFSM : MonoBehaviour
     private void ChasePlayer()
     {
         agent.isStopped = false;
+        animator.SetInteger("estado", 1);
         if (sightSensor.detectedObject == null)
         {
             currentState= EnemyState.GoToBase;
@@ -68,6 +72,7 @@ public class EnemyFSM : MonoBehaviour
     private void AttackPlayer()
     {
         agent.isStopped = true;
+        animator.SetInteger("estado", 0);
         if (sightSensor.detectedObject == null)
         {
             currentState = EnemyState.GoToBase;
@@ -86,7 +91,6 @@ public class EnemyFSM : MonoBehaviour
     {
         Vector3 directionToPosition= Vector3.Normalize(position - transform.position) ;
         directionToPosition.y = 0f;
-        //transform.parent.position = directionToPosition;
         Quaternion targetRotation = Quaternion.LookRotation(directionToPosition);
         transform.parent.rotation = Quaternion.Slerp(transform.parent.rotation, targetRotation, Time.deltaTime * 5f);
     }
@@ -94,12 +98,16 @@ public class EnemyFSM : MonoBehaviour
     private void AttackBase()
     {
         agent.isStopped = true;
+        animator.SetInteger("estado", 0);
+        LookTo(baseTransform.position);
         shoot();
+
     }
 
     private void GoToBase()
     {
         agent.isStopped = false;
+        animator.SetInteger("estado", 1);
         agent.SetDestination(baseTransform.position);
         if(sightSensor.detectedObject != null) 
         {

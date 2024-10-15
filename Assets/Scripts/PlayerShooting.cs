@@ -15,7 +15,6 @@ public class PlayerShooting : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Debug.Log("Pew pew");
             Instantiate(prefab, shootpoint.transform.position, shootpoint.transform.rotation);
         }
 

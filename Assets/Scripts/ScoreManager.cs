@@ -1,7 +1,7 @@
 using UnityEngine;
 
-public class ScoreManger : MonoBehaviour
-{   public static ScoreManger instance;
+public class ScoreManager : MonoBehaviour
+{   public static ScoreManager instance;
     public int amount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()

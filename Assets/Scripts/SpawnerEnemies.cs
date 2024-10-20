@@ -1,8 +1,12 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System;
+using Random = UnityEngine.Random;
 
 public class SpawnerEnemies : MonoBehaviour
 {
-    public GameObject prefab;
+    //public GameObject prefab;
+    public List<GameObject> enemyPrefabs;
     public float starttime;
     public float endtime;
     public float spawnrate;
@@ -14,8 +18,14 @@ public class SpawnerEnemies : MonoBehaviour
         Invoke("EndSpawner", endtime);
     }
     private void Spawn()
-    {
-        Instantiate(prefab,transform.position + new Vector3(-2,0,6),transform.rotation);
+    {   int randomIndex = Random.Range(0, enemyPrefabs.Count+1);
+        if (randomIndex>enemyPrefabs.Count-1){
+            randomIndex = 0;
+        }
+        GameObject randomEnemy = enemyPrefabs[randomIndex];
+        Debug.Log(randomIndex);
+
+        Instantiate(randomEnemy,transform.position + new Vector3(-2,0,6),transform.rotation);
         
     }
     private void EndSpawner()

@@ -4,7 +4,11 @@ using UnityEngine;
 public class WavesManager : MonoBehaviour
 {
     public static WavesManager instance;
+
     public List<SpawnerEnemies> waves;
+    public List<NewSpawner> waves2;
+
+
     void Awake()
     {
         if (instance == null)

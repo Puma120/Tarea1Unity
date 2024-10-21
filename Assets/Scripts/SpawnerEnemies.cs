@@ -17,6 +17,12 @@ public class SpawnerEnemies : MonoBehaviour
         InvokeRepeating("Spawn", starttime, spawnrate);
         Invoke("EndSpawner", endtime);
     }
+    public void NextWave()
+    {
+        WavesManager.instance.waves.Add(this);
+        InvokeRepeating("Spawn", starttime, spawnrate);
+        Invoke("EndSpawner", endtime);
+    }
     private void Spawn()
     {   int randomIndex = Random.Range(0, enemyPrefabs.Count+1);
         if (randomIndex>enemyPrefabs.Count-1){

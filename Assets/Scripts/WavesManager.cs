@@ -23,7 +23,7 @@ public class WavesManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("ya existe el objeto score manager", gameObject);
+            Debug.LogError("ya existe el objeto waves manager", gameObject);
         }
     }
 }

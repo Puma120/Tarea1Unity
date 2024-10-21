@@ -13,7 +13,7 @@ public class EnemysManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("ya existe el objeto score manager", gameObject);
+            Debug.LogError("ya existe el objeto enemy manager", gameObject);
         }
     }
 }

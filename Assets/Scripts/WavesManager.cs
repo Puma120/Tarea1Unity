@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-
 public class WavesManager : MonoBehaviour
 {
     public static WavesManager instance;
@@ -28,3 +27,4 @@ public class WavesManager : MonoBehaviour
         }
     }
 }
+

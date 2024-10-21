@@ -139,3 +139,4 @@ public class EnemyFSM : MonoBehaviour
         clone.transform.rotation= shootPoint.transform.rotation;
     }
 }
+

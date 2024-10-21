@@ -5,12 +5,10 @@ using Random = UnityEngine.Random;
 
 public class SpawnerEnemies : MonoBehaviour
 {
-    //public GameObject prefab;
     public List<GameObject> enemyPrefabs;
     public float starttime;
     public float endtime;
     public float spawnrate;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         WavesManager.instance.waves.Add(this);
@@ -40,3 +38,5 @@ public class SpawnerEnemies : MonoBehaviour
         CancelInvoke();
     }
 }
+
+

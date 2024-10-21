@@ -3,7 +3,6 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {   public static ScoreManager instance;
     public int amount;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         if (instance == null)
@@ -16,5 +15,5 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
 }
+

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1814196470289697183}
   - component: {fileID: 4653560498672938667}
   - component: {fileID: 5566729794526250948}
+  - component: {fileID: 8618664592875670592}
   - component: {fileID: 8493776394907232894}
   - component: {fileID: -5359416113282627413}
-  - component: {fileID: 8618664592875670592}
   m_Layer: 3
   m_Name: EnemyFireBall
   m_TagString: Untagged
@@ -125,6 +125,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 4
+--- !u!114 &8618664592875670592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7136474022643488633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea293d6636ab9444863d72f9d0e430c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 5
 --- !u!114 &8493776394907232894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,16 +178,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &8618664592875670592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7136474022643488633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ea293d6636ab9444863d72f9d0e430c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 5

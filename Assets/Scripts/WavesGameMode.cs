@@ -2,11 +2,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class WavesGameMode : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Life playerLife;
     public Life baseLife;
 
-    // Update is called once per frame
     void Update()
     {
         if(EnemysManager.instance.enemys.Count <= 0 && WavesManager.instance.wavesRemaining <= 0)

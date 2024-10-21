@@ -18,3 +18,4 @@ public class UI : MonoBehaviour
         waveText.SetText($"Oleadas\nrestantes:\n {wavesManager.wavesRemaining}");
     }
 }
+
